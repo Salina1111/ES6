@@ -90,3 +90,7 @@ function array(s){
 }
 
 console.log(array(12345));
+
+//Combination
+const powerset = arr => arr.reduce((a, v) => a.concat(a.map(r => [v].concat(r))), [[]]);
+console.log(powerset([1, 2]));
