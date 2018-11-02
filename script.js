@@ -80,3 +80,13 @@ for (var i=1; i <= 100; i++){
     (i % 3 == 0)?console.log("Fizz"):(i % 5 == 0)?console.log("Buzz"):console.log(i);
     
 }
+
+//To convert a specified number to an array of digits
+
+function array(s){
+    let d = s.toString();
+    let a = [...d];//use of spread operator
+    return a;
+}
+
+console.log(array(12345));
