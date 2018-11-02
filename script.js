@@ -74,3 +74,9 @@ function chunkArray(myArray, chunk_size){
     
     return results;
 }
+
+//FizzBuzz
+for (var i=1; i <= 100; i++){
+    (i % 3 == 0)?console.log("Fizz"):(i % 5 == 0)?console.log("Buzz"):console.log(i);
+    
+}
