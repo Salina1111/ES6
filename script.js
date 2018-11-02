@@ -4,8 +4,8 @@ function reverseString(str) {
     for (let i = str.length - 1, j = 0; i >= 0; i--, j++)
     a[j] = str[i];
     b = a.join('');
-  
-   if(b===str ){
+    
+    if(b===str ){
         alert(str+" " +"is palindrome");
         
     }else{
@@ -13,12 +13,24 @@ function reverseString(str) {
     }
     return b;
 }
-  console.log(reverseString('eye'));
+console.log(reverseString('eye'));
 
-  //Integer reversal
+//Integer reversal
 function Int(num) {
     let r = num.toString().split('').reverse().join('')
     return r;
 }
 
 console.log(Int(12345));
+
+//Capitalize each first word
+function UpperCase(str) {
+    const strArr = str.toLowerCase().split(' ');
+    
+    for(let i = 0; i < strArr.length; i++) {
+        strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
+    }
+    
+    return strArr.join(' ');
+}
+console.log(UpperCase('say hello'));
