@@ -34,3 +34,32 @@ function UpperCase(str) {
     return strArr.join(' ');
 }
 console.log(UpperCase('say hello'));
+
+
+//maximum character
+
+function maxCharacter(str) {
+    const a = {};
+    let maxNum = 0;
+    let maxChar = '';
+    
+    str.split('').forEach((c) => {
+        if (a[c]) {
+            a[c]++; // This will add 1
+        } else { // If no letter has been found yet
+            a[c] = 1;
+        }
+    });
+    
+    for (let c in a) {
+        if (a[c] > maxNum) {
+            maxNum = a[c];
+            maxChar = c;
+        }
+    }
+    return (maxChar+" = "+maxNum);
+}
+
+const output = maxCharacter('papaya');
+
+console.log(output);
