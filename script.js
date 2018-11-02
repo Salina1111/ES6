@@ -50,7 +50,7 @@ function maxCharacter(str) {
             a[c] = 1;
         }
     });
-    
+
     for (let c in a) {
         if (a[c] > maxNum) {
             maxNum = a[c];
@@ -63,3 +63,14 @@ function maxCharacter(str) {
 const output = maxCharacter('papaya');
 
 console.log(output);
+
+//Chunk Array
+function chunkArray(myArray, chunk_size){
+    var results = [];
+    console.log()
+    while (myArray.length) {
+        results.push(myArray.splice(0, chunk_size));
+    }
+    
+    return results;
+}
